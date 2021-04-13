@@ -29,7 +29,7 @@ docker build -t osm-tools:latest .
 To run as an interactive command line:
 
 ```
-docker run --rm  -it --volume  $env:USERPROFILE/downloads/data/osm:/osm --rm -it osm-tools
+docker run --rm  -it --volume  $env:USERPROFILE/downloads/data/osm:/osm osm-tools /bin/bash
 ```
 
 ## Examples
