@@ -37,23 +37,23 @@ docker run --rm  -it --volume  $env:USERPROFILE/downloads/data/osm:/osm osm-tool
 **Convert from osm.pbf to o5m**
 
 ```
-docker run --rm  -it --volume $env:USERPROFILE/downloads/data/osm/downloads/data/osm:/osm osm-tools osmconvert peru.osm.pbf -o=peru.o5m
+docker run --rm  -it --volume $env:USERPROFILE/downloads/data/osm:/osm osm-tools osmconvert peru.osm.pbf -o=peru.o5m
 ```
 
 **Extract all highways**
 
 ```
-docker run --rm -it --volume $env:USERPROFILE/downloads/data/osm/downloads/data/osm:/osm osm-tools osmfilter peru.o5m --keep="highway=" -o=highways.osm
+docker run --rm -it --volume $env:USERPROFILE/downloads/data/osm:/osm osm-tools osmfilter peru.o5m --keep="highway=" -o=highways.osm
 ```
 
 *OR*
 
 ```
-docker run --rm -it --volume $env:USERPROFILE/downloads/data/osm/downloads/data/osm:/osm osm-tools osmosis --read-pbf peru.osm.pbf --tf accept-ways highway=* --used-node --write-xml highways.osm
+docker run --rm -it --volume $env:USERPROFILE/downloads/data/osm:/osm osm-tools osmosis --read-pbf peru.osm.pbf --tf accept-ways highway=* --used-node --write-xml highways.osm
 ```
 
 **Convert OSM to SHP**
 
 ```
-docker run --rm -it --volume $env:USERPROFILE/downloads/data/osm/downloads/data/osm:/osm osm-tools ogr2ogr -skipfailures -f GPKG highways.gpkg highways.osm lines
+docker run --rm -it --volume $env:USERPROFILE/downloads/data/osm:/osm osm-tools ogr2ogr -skipfailures -f GPKG highways.gpkg highways.osm lines
 ```
