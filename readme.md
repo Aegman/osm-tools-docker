@@ -8,7 +8,7 @@ This image contains the following comand line utilities:
 
 ## Prepare your data:
 
-Download some OSM data (pbf) from [geoFabrik](https://download.geofabrik.de/), or other sources.
+Download some OSM data (pbf) from [Geofabrik](https://download.geofabrik.de/), or other sources.
 
 for example:
 
